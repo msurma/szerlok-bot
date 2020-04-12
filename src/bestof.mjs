@@ -34,6 +34,9 @@ async function getEntriesForTag(tag) {
       .filter(
         (entry) => new Date(entry.date) > new Date(Date.now() - 60 * 60 * 12 * 1000),
       )
+      .filter(
+        (entry) => entry.vote_count > 5,
+      )
       .sort((entry1, entry2) => entry2.vote_count - entry1.vote_count)
       .slice(0, 10),
   };
