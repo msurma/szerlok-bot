@@ -2,9 +2,11 @@
   "name": "szerlok-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "bestof.mjs",
+  "main": "src/bestof.mjs",
   "type": "module",
   "scripts": {
+    "lint": "eslint '**/*.mjs' --fix",
+    "bestof": "node src/bestof.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +21,9 @@
   "homepage": "https://github.com/msurma/szerlok-bot#readme",
   "dependencies": {
     "axios": "^0.19.2",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "md5": "^2.2.1",
+    "qs": "^6.9.3"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
