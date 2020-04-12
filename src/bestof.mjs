@@ -45,7 +45,7 @@ Promise.all(tagEntriesPromises)
   .then((tagEntries) => {
     let tagsRankMessage;
     for (const entries of tagEntries) {
-      let tagRankMessage;
+      let tagRankMessage = '';
 
       if (entries.entriesList.length) {
         tagRankMessage = entries.entriesList.map(
@@ -64,11 +64,11 @@ Promise.all(tagEntriesPromises)
     
     ${tagsRankMessage}
 
-    **Pytania, skargi, prośby, zażalenia? Piszta lub wołajta** @[surma](https://www.wykop.pl/ludzie/surma)**!**
+**Pytania, skargi, prośby, zażalenia? Piszta lub wołajta** @[surma](https://www.wykop.pl/ludzie/surma)**!**
 
-    **Jestem OpenSource!** Chcesz mnie popsuć albo dorzucić nowy ficzer? [Śmiało, zapraszam!](https://github.com/msurma/szerlok-bot)
-    
-    ! PS. Lubię suby`)
+**Jestem OpenSource!** Chcesz mnie popsuć albo dorzucić nowy ficzer? [Śmiało, zapraszam!](https://github.com/msurma/szerlok-bot)
+
+! PS. Lubię suby`)
   .then((tagsRankMessage) => {
     postEntry(tagsRankMessage);
   })
