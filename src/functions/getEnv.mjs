@@ -7,5 +7,5 @@ export default (envName) => {
     throw result.error;
   }
 
-  return result.parsed[envName];
+  return process.env[envName];
 };
