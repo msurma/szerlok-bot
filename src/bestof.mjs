@@ -46,9 +46,9 @@ const tagEntriesPromises = getEnv('TAG_LIST').split(',').map((tag) => getEntries
 
 Promise.all(tagEntriesPromises)
   .then((tagEntries) => {
-    let tagsRankMessage;
+    let tagsRankMessage = '';
     for (const entries of tagEntries) {
-      let tagRankMessage = '';
+      let tagRankMessage;
 
       if (entries.entriesList.length) {
         tagRankMessage = entries.entriesList.map(
